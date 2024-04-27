@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="red"></div>
+        <div style="text-align: end;
+        margin-right: 20px;" class="blue">
+            <p>ola</p>
+        </div>
+        <div class="green">
+            <div class = "formulario">
+                <div class="linha1">
+                    <div class="descrisco">
+                        <p>Descrição do risco</p>
+                        <input class="select" type="text" placeholder="Resumo do risco a ser cadastrado">
+                    </div>
+                    <div>
+                        <p>Tipo de Risco</p>
+                        <label for="imsg">
+                            <select class="select" name="Risk" id="Risco">
+                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                                <option value="conf">Conformity</option>
+                                <option value="HR">Human Resources</option>
+                                <option value="OP">Operacional</option>
+                                <option value="strat">Strategic</option>
+                                <option value="none">Vazia</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div>
+                        <p>Probabilidade</p>
+                        <label for="imsg">
+                            <select  class="select" name="Probabilidade" id="Prob">
+                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                                <option value="VL">Very Low</option>
+                                <option value="L">Low</option>
+                                <option value="Med">Medium</option>
+                                <option value="Hi">High</option>
+                                <option value="Vh">Very High</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="linha2">
+                    <div>
+                        <p>Area Responsável</p>
+                        <label for="imsg">
+                            <select class="select" name="area resp" id="aresp">
+                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                                <option value="APO">APO</option>
+                                <option value="DEA-TD">DEA-TD</option>
+                                <option value="DEA-TD (A.NEVES)">DEA-TD(A. Neves)</option>
+                                <option value="DEA-TD (J.PEREIRA)">DEA-TD (J.Pereira)</option>
+                                <option value="DEA-TD (K.TUDISCO)">DEA-TD (K.Tudisco)</option>
+                                <option value="DEA-TD (M.FANGUEIRO)">DEA-TD (M.Fangueiro)</option>
+                                <option value="DEA-TD (M.RIZZO)">DEA-TD (M.Rizzo)</option>
+                                <option value="DEA-TD (N.SILVEIRA)">DEA-TD (N.Silveira)</option>
+                                <option value="DEA-TD (W.SILVEIRA)">DEA-TD(W.Silveira)</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div>
+                        <p>Classificação do risco</p>
+                        <label for="imsg">
+                            <select class="select" name="Classificação do risco" id="cla-risc">
+                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                                <option value="sust">Susteinable</option>
+                                <option value="mod">Moderate</option>
+                            <option value="sev">Severe</option>
+                            <option value="crit">Critical</option>
+                        </select>
+                        </label>
+                    </div>
+                    <div>
+                        <p>Projeto</p>
+                        <label for="imsg">
+                            <select class="select" name="Projeto" id="proj">
+                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                                <option value="car1">Carro 1</option>
+                                <option value="car2">Carro 2</option>
+                                <option value="car3">Carro 3</option>
+                                <option value="car4">Carro 4</option>
+                                <option value="car5">Carro 5</option>
+                                <option value="car6">Carro 6</option>
+                                <option value="car7">Carro 7</option>
+                                <option value="car8">Carro 8</option>
+                                <option value="car9">Carro 9</option>
+                                <option value="car10">Carro 10</option>
+                                <option value="car11">Carro 11</option>
+                                <option value="car12">Carro 12</option>
+                                <option value="car13">Carro 13</option>
+                                <option value="car14">Carro 14</option>
+                                <option value="car15">Carro 15</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                    <div class="linha3">
+                        <div>
+                            <p>Data do alerta</p>
+                            <input class="select" type="datetime-local" placeholder="DD/MM/AAAA">
+                        </div>
+                        <div>
+                        <p>Impacto</p>
+                        <label for="imsg">
+                            <select class="select" name="Impacto" id="imp">
+                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                                <option value="verylow">Very Low</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="High">High</option>
+                                <option value="Veryhigh">Very High</option>
+                            </select>
+                        </label>
+                                        </div>
+                                        <div>
+                        <p>Impacto (Renault)</p>
+                            <label for="imsg">
+                                <select class="select" name="Impacto (Renault)" id="impreno">
+                                    <option value="Selecione" selected>Selecione Uma Opção</option>
+                                    <option value="K1">K1</option>
+                                    <option value="K2">K2</option>
+                                    <option value="K3">K3</option>
+                                    <option value="K4">K4</option>
+                                </select>
+                            </label>
+                                        </div>
+                    </div>
+                    <div class="linha4">
+                        <div>
+                            <label for="imsg">Impacto/Consequências</label><br>
+                            <input class="impcons" type="Impacto/Consequencias no andamento da produção">
+                        </div>
+                        <div>
+                        <p>Jalón Afetado</p>
+                        <label for="jalon">
+                            <select  class="select" name="Estado" id="Status">
+                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                                <option value="ABDLot-Cp">ABDLot-Cp</option>
+                                <option value="ABP">ABP</option>
+                                <option value="ABPT">ABPT</option>
+                                <option value="ABVC">ABVC</option>
+                                <option value="CO">CO</option>
+                                <option value="Cp">CP</option>
+                                <option value="Doccompletion">Doc Completion</option>
+                                <option value="Docserie">Doc Série</option>
+                                <option value="MA">MA</option>
+                                <option value="PPC">PPC</option>
+                                <option value="TDU">TDU</option>
+                                <option value="TGA">TGA</option>
+                                <option value="Todosind">Todos industriais</option>
+                                <option value="Todos">Todos</option>
+                                <option value="none">Nenhum</option>
+                            </select>
+                        </label>
+                        </div>
+                        <div class="metier">
+                        <p>Metier</p>
+                        <label for="imsg">
+                            <select class="select" name="Metier" id="met">
+                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                                <option value="apo">APO</option>
+                                <option value="dea-gop">DEA-GOP</option>
+                                <option value="dea-mm">DEA-MM</option>
+                                <option value="dea-pe">DEA-PE</option>
+                                <option value="dea-sc">DEA-SC</option>
+                                <option value="dea-sisasm">DEA-SI/SA/SM</option>
+                                <option value="dea-td">DEA-TD</option>
+                                <option value="dea-va">DEA-VA </option>
+                                <option value="dea-vd">DEA-VD</option>
+                                <option value="de-vb">DE-VB</option>
+                                <option value="de-vd">DE-VD</option>
+                                <option value="ica">ICA</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="suppchain">Supply Chain</option>
+                                <option value="none">Nenhum</option>
+                            </select>
+                        </label>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
