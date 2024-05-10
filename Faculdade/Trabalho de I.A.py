@@ -1,7 +1,12 @@
 import random
 import math
 
+global count
+count=0
+
 def function_to_optimize(x):
+    global count
+    count+=1
     result = 0
     for i in range(len(x) - 1):
         result += 100 * (x[i]**2 - x[i+1])**2 + (x[i] - 1)**2
@@ -35,6 +40,7 @@ def firefly_algorithm(num_fireflies, num_dimensions, bounds, max_generations):
     best_intensity = float('inf')
 
     for generation in range(max_generations):
+        converged = True  # Flag para verificar se houve convergência
         for i in range(num_fireflies):
             intensity_i = function_to_optimize(fireflies[i])
 
@@ -45,20 +51,25 @@ def firefly_algorithm(num_fireflies, num_dimensions, bounds, max_generations):
                     attractiveness_ij = attractiveness(intensity_i, intensity_j, distance_ij)
                     step_size = 0.1
                     fireflies[i] = move_firefly(fireflies[i], fireflies[j], step_size, bounds)
+                    converged = False 
 
             if intensity_i < best_intensity:
                 best_intensity = intensity_i
                 best_firefly = fireflies[i]
+
+        if converged:  
+            break
 
     return best_firefly, best_intensity
 
 num_fireflies = 200
 num_dimensions = 10
 bounds = [(-100, 100) for _ in range(num_dimensions)]
-max_generations = 100
+max_generations = 500
 
-best_solution, best_intensity = firefly_algorithm(num_fireflies, num_dimensions, bounds, max_generations)
+for _ in range(51):
+    best_solution, best_intensity = firefly_algorithm(num_fireflies, num_dimensions, bounds, max_generations)
+    print("Melhor solução encontrada:", best_solution)
+    print("Melhor intensidade encontrada:", best_intensity)
 
-print("Melhor solução encontrada:", best_solution)
-print("Melhor intensidade encontrada:", best_intensity)
-
+print('a função objetivo é', count)
